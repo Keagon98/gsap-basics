@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -10,16 +12,88 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
+    font-family: 'Oswald', sans-serif;
     overflow: hidden;
 }
 
-#demo {
+h1 {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 7.2rem;
     display: flex;
-    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    height: 150px;
 }
 
-.circle {
+li {
+    list-style: none;
+}
+
+.landing-page-container main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing-links {
+    width: 90%;
+    margin: 2em 0;
+}
+
+.landing-links ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.landing-links ul li a {
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.landing-links ul li a:hover {
+    color: #45ff64;
+    transition: ease-in .3s;
+}
+
+.box {
+    height: 550px;
+    width: 550px;
+    margin: 5em 0;
+}
+
+.box.a {
+    background-color: orange;
+}
+
+.box.b {
+    background-color: blue;
+}
+
+.box.c {
+    background-color: red;
+}
+
+.box.d {
+    background-color: purple;
+}
+
+.box.e {
+    background-color: white;
+}
+
+.box.f {
+    background-color: greenyellow;
+}
+
+.box.g {
+    background-color: yellow;
+}
+
+/* .circle {
     height: 50px;
     width: 50px;
     border-radius: 100%;
@@ -44,4 +118,4 @@ body {
 
 .green {
     background-color: greenyellow;
-}
+} */

@@ -1,101 +1,71 @@
-/* gsap.to(".logo", 
-{
-    duration: 2, 
-    x: 300, 
-    backgroundColor: "#456789",
-    borderRadius: "20%",
-    border: "5px solid #ffffff",
-    ease: "back"
-}); */
+"use strict";
 
-/* gsap.set(".logo", {transformOrigin: "50% 50%"});
-gsap.to(".logo", {duration: 5, rotation: 360});
+// Landing Page Animations
 
-let myObject = {
-    rotation: 0
-};
-
-gsap.to(myObject, {duration: 5, rotation: 360, onUpdate: function() {
-    console.log(myObject.rotation);
-}}) */
-
-/* gsap.from(".logo", 
-{
-    duration: 1.5, 
-    opacity: 0,
-    scale: 0.3,
-    ease: "back",
-}); */
-
-/* gsap.from(".circle", 
-{
-    duration: 1, 
-    opacity: 0,
-    y: 150,
-    stagger: 0.25,
-}); */
-
-/* gsap.from(".circle", 
-{
-    duration: 1, 
-    opacity: 0,
-    y: "random(-200, 200)",
-    stagger: 0.25,
-}); */
-
-/* gsap.from(".circle", 
-{
-    duration: 1, 
-    opacity: 0,
-    delay: 1.5,
-    y: "random(-200, 200)",
-    stagger: 0.25,
-}); */
-
-// GSAP Timeline - no need to use delay
-
-let tl = gsap.timeline();
-
-tl.from(".logo", 
-{
-    duration: 1.5, 
-    opacity: 0,
-    scale: 0.3,
-    ease: "back",
+const text = new SplitType('#landing-text');
+let tl = gsap.timeline({
+    defaults: {
+        stagger: 0.15,
+    }
 });
 
-/* tl.from(".circle", 
+tl.from(".char", 
 {
-    duration: 1, 
-    opacity: 0,
-    y: "random(-200, 200)",
-    stagger: 0.25,
-}); */
+    y: 550,
+    duration: 1.1,
+    ease: "in"
+})
 
-/* tl.from(".circle", 
-{
-    duration: 1, 
+tl.from("#list-item", {
+    x: 100,
     opacity: 0,
-    y: "random(-200, 200)",
-    stagger: 0.25,
-}, "+=1"); */
+    ease: "in"
+}, .8)
 
-// Using labels
+// Scroll Animations
 
-tl.from(".circle", 
-{
-    duration: 1, 
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".a", {
+    scrollTrigger: {
+        trigger: ".a",
+        start: "50px 50%",
+        end: "+=400",
+        markers: true,
+        toggleActions: "play pause resume none"
+    },
     opacity: 0,
-    y: 150,
-    stagger: 0.25,
+    ease: "in",
+    y: 100,
+    duration: 1
 });
 
-/* tl.addLabel("logoOutro", "+=1")
-
-tl.to(".circle", 
-{
-    duration: 0.5, 
+gsap.from(".b", {
+    scrollTrigger: {
+        trigger: ".b",
+        start: "50px 50%",
+        end: "+=400",
+        markers: true,
+        toggleActions: "play pause resume none"
+    },
     opacity: 0,
-    x: 300,
-    ease: "out",
-}, "logoOutro"); */
+    ease: "in",
+    y: 100,
+});
+
+gsap.from(".c", {
+    scrollTrigger: {
+        trigger: ".c",
+        start: "50px 50%",
+        end: "+=400",
+        markers: true,
+        toggleActions: "play pause resume none"
+    },
+    opacity: 0,
+    ease: "in",
+    y: 100,
+});
+
+
+
+
