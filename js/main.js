@@ -17,7 +17,7 @@ tl.from(".char",
 })
 
 tl.from("#list-item", {
-    x: 100,
+    x: 80,
     opacity: 0,
     ease: "in"
 }, .8)
@@ -37,7 +37,7 @@ gsap.from(".a", {
     opacity: 0,
     ease: "in",
     y: 100,
-    duration: 1
+    duration: 1,
 });
 
 gsap.from(".b", {
